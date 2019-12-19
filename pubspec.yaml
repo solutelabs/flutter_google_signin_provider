@@ -1,4 +1,4 @@
-name: google_signin_provider
+name: flutter_google_signin
 description: Google signin implementation based on Auth provider.
 version: 0.0.1
 
