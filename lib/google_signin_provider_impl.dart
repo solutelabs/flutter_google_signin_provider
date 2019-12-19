@@ -28,7 +28,7 @@ class GoogleSignInProvider implements AuthProvider {
   Future<Map<String, dynamic>> signIn({String id, String password}) async {
     final userAccount = await googleSignIn.signIn();
     if (userAccount == null) {
-      throw SignInCancelledException();
+      throw GoogleSignInCancelledException();
     }
     final auth = await userAccount.authentication;
     return {
@@ -51,4 +51,4 @@ class GoogleSignInProvider implements AuthProvider {
   }
 }
 
-class SignInCancelledException implements Exception {}
+class GoogleSignInCancelledException implements Exception {}
