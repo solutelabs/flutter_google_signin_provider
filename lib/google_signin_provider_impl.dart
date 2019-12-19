@@ -49,6 +49,12 @@ class GoogleSignInProvider implements AuthProvider {
   Future<Map<String, dynamic>> verifyPassword({String password}) {
     throw UnimplementedError();
   }
+
+  @override
+  Future<bool> isSessionActive() async {
+    final sessionData = await retrieveSessionData();
+    return sessionData != null;
+  }
 }
 
 class GoogleSignInCancelledException implements Exception {}
