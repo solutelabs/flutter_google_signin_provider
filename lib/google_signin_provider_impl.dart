@@ -1,0 +1,54 @@
+import 'package:auth_provider/auth_provider.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+
+class GoogleSignInProvider implements AuthProvider {
+  final GoogleSignIn googleSignIn;
+  SessionStorage sessionStorage;
+
+  GoogleSignInProvider({this.googleSignIn, this.sessionStorage});
+
+  @override
+  Future<bool> cacheSessionData(Map<String, dynamic> sessionData) {
+    return sessionStorage.set("sessionData", sessionData);
+  }
+
+  @override
+  Future<bool> logout() async {
+    await googleSignIn.signOut();
+    await sessionStorage.clearData();
+    return true;
+  }
+
+  @override
+  Future<Map<String, dynamic>> retrieveSessionData() {
+    return sessionStorage.get("sessionData");
+  }
+
+  @override
+  Future<Map<String, dynamic>> signIn({String id, String password}) async {
+    final userAccount = await googleSignIn.signIn();
+    if (userAccount == null) {
+      throw SignInCancelledException();
+    }
+    final auth = await userAccount.authentication;
+    return {
+      "auth": {
+        "auth_token": auth.accessToken,
+        "id_token": auth.idToken,
+        "hash_code": auth.hashCode,
+      },
+      "profile": {
+        "display_name": userAccount.displayName,
+        "email": userAccount.email,
+        "photo_url": userAccount.photoUrl,
+      }
+    };
+  }
+
+  @override
+  Future<Map<String, dynamic>> verifyPassword({String password}) {
+    throw UnimplementedError();
+  }
+}
+
+class SignInCancelledException implements Exception {}
