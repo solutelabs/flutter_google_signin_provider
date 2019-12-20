@@ -55,6 +55,13 @@ class GoogleSignInProvider implements AuthProvider {
     final sessionData = await retrieveSessionData();
     return sessionData != null;
   }
+
+  @override
+  Future<Map<String, dynamic>> fetchAdditionalData({
+    Map<String, dynamic> authToken,
+  }) {
+    throw UnimplementedError();
+  }
 }
 
 class GoogleSignInCancelledException implements Exception {}
