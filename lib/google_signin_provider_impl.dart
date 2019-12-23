@@ -62,6 +62,11 @@ class GoogleSignInProvider implements AuthProvider {
   }) {
     throw UnimplementedError();
   }
+
+  @override
+  Future<Map<String, dynamic>> signUp({Map<String, dynamic> data}) {
+    throw UnimplementedError();
+  }
 }
 
 class GoogleSignInCancelledException implements Exception {}
