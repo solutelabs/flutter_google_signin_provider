@@ -19,7 +19,7 @@ flutter_google_signin:
 
 **Step 2:** Integrate Google-Sign in for Android and iOS. [Reference](https://pub.dev/packages/google_sign_in)
 
-##Usage
+## Usage
 ```
 import 'package:flutter_google_signin/google_signin_provider.dart';
 
