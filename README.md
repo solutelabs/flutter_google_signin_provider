@@ -1,14 +1,29 @@
-# google_signin_provider
+# Google Sign-in Provider
 
-Google signin implementation based on Auth provider.
+An Implementation of Google sign-in based on dart Auth provider.
 
-## Getting Started
+##Introduction
+This packages is intended to easily integrate Google sign-in in Flutter based Application.
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+The package is responsible for the Google-Sign in and caching the session data. We can also provide a custom implementation of caching session data.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
+##Installation
+**Step 1:** Add this package as a dependency in `pubspec.yaml` file.
+
+```
+flutter_google_signin:
+    git:
+      url: git@gitlab.com:milind.mevada/flutter_google_signin_provider.git
+``` 
+
+**Step 2:** Integrate Google-Sign in for Android and iOS. [Reference](https://pub.dev/packages/google_sign_in)
+
+##Usage
+```
+import 'package:flutter_facebook_signin/flutter_facebook_signin.dart';
+
+...
+
+await googleSignInProvider(scopes: ['email']).signIn();
+```

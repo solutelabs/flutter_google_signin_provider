@@ -27,7 +27,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: d9a1a66e228c56684db2647b9c2491488d0cd70b
+      resolved-ref: aa7fd7811f77871afb245fd1ada047d0352de1d6
       url: "git@gitlab.com:milind.mevada/dart_auth_provider.git"
     source: git
     version: "0.0.1"
