@@ -21,7 +21,7 @@ flutter_google_signin:
 
 ##Usage
 ```
-import 'package:flutter_facebook_signin/flutter_facebook_signin.dart';
+import 'package:flutter_google_signin/google_signin_provider.dart';
 
 ...
 
