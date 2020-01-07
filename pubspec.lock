@@ -27,8 +27,8 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: aa7fd7811f77871afb245fd1ada047d0352de1d6
-      url: "git@gitlab.com:milind.mevada/dart_auth_provider.git"
+      resolved-ref: "166fa2be7ee68a9e6385e286fba2c73fa73711dc"
+      url: "git@github.com:solutelabs/dart_auth_provider.git"
     source: git
     version: "0.0.1"
   boolean_selector:

@@ -10,7 +10,7 @@ dependencies:
     sdk: flutter
   auth_provider:
     git:
-      url: git@gitlab.com:milind.mevada/dart_auth_provider.git
+      url: git@github.com:solutelabs/dart_auth_provider.git
   google_sign_in: ^4.1.1
 
 dev_dependencies:

@@ -14,7 +14,7 @@ The package is responsible for the Google-Sign in and caching the session data. 
 ```
 flutter_google_signin:
     git:
-      url: git@gitlab.com:milind.mevada/flutter_google_signin_provider.git
+      url: git@github.com:solutelabs/flutter_google_signin_provider.git
 ``` 
 
 **Step 2:** Integrate Google-Sign in for Android and iOS. [Reference](https://pub.dev/packages/google_sign_in)
