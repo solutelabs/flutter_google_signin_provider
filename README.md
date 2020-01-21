@@ -1,6 +1,6 @@
 # Google Sign-in Provider
 
-An Implementation of Google sign-in based on dart Auth provider.
+An Implementation of Google sign-in based on [dart Auth provider](https://github.com/solutelabs/dart_auth_provider).
 
 ## Introduction
 This packages is intended to easily integrate Google sign-in in Flutter based Application.
